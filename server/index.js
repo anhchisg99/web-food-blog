@@ -17,9 +17,9 @@ app.use(bodyParser.json())
 //mongoose
 // mongoose.connect('mongodb://localhost/bepmina')
 mongoose.connect(process.env.MONGODB_URL)
-app.get('/', (req, res) => {
-  res.send('Hello World!')
-})
+// app.get('/', (req, res) => {
+//   res.send('Hello World!')
+// })
 app.use('/api/blog',routeBlog)
 app.use('/api/user',routeUser)
 if (process.env.NODE_ENV === 'production') {
